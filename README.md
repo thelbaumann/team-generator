@@ -44,7 +44,8 @@ Entering this data should write the file to an employee array, which is then pas
 
 
 ## Installing/Dependencies
-```npm install``` to install the required dependencies listed in the package.json file required for this application to run.
+```npm i jest```
+```npm i inquirer```
 
 ## Usage Information
 Clone this project, install the required dependencies, run 'node app.js' in your terminal, and answer the following questions prompted by the terminal to generate the html page of team members.
