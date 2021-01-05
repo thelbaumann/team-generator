@@ -32,7 +32,7 @@ so that I have quick access to emails and GitHub profiles
 #### Acceptance Criteria
 As a part of this project, I was also provided with the following standards that my project should meet:
 
-Passes all jest-powered tests provided in test folder
+Passes all jest-powered tests provided in test folder, which included making sure all required properties and methods were containde on employee, manager, engineer, and intern classes
 
 Use Inquirer to prompt the user to enter employee data, allowing them to add 1 manager, and as many "engineer" or "intern" employees as the user wants
 
@@ -50,18 +50,30 @@ Entering this data should write the file to an employee array, which is then pas
 Clone this project, install the required dependencies, run 'node app.js' in your terminal, and answer the following questions prompted by the terminal to generate the html page of team members.
 
 ## Walkthrough
-![Opening Screen](https://github.com/thelbaumann/README.Generator/blob/main/Assets/Screenshots/screen_1.png)
+
+### Testing
+Jest Tests guided the beginning of my development, by helping me to construct employee, manager, engineer, and intern classes which I would then use to create objects to be pushed to the html file later. I began my development with test-driven development, adding and changing these classes until they successfully passed all tests.
+
+![Passed All Tests](https://github.com/thelbaumann/team-generator/blob/main/assets/all-tests-passed.png)
+![Class-specific Passed Tests](https://github.com/thelbaumann/team-generator/blob/main/assets/employee-test-pass.png)
 
 
+### Using the Generator
 The file structure of this code project is much more complex than my last CLI project. The first is a "lib" folder, containing .js files of the different classes used to define employees: employee (applied to all), manager (supplemental to employee), intern (supplemental), and engineer (supplemental). The templates folder contains html "employee card" templates for each of the employee types. This is called and used by the html Renderer file, also contained in the former folder "lib". Then there is a test folder, containing a test file for every employee + supplemental class, which runs to make sure each new employee made with these classes will contain the properties and methods required to successfully write the file. Finally, there is the app.js file, which contains the main functionality of the file, which is the Inquirer prompts, the if/else statements, the switch statements, and the try/catch statements required to handle the information given by the user, and allow the user to continue to loop through adding employees to their list as long as they wish.
 
-![Failed Prompt Validation](https://github.com/thelbaumann/README.Generator/blob/main/Assets/Screenshots/validation_failed.png)
+![File Structure](https://github.com/thelbaumann/README.Generator/blob/main/Assets/Screenshots/validation_failed.png)
 
 Upon running app.js, the user is first prompted via Inquirer for the information for the "manager" role. This is because the user story tell us this application is meant to be used by managers, so it is assumed they would be the users, and that a manager would be required to build a team. Once the manager information is fed via Inquirer, a new Manager object is created via the manager and employee classes, and then this object is written to the Employees array. 
 
+![Inputting Manager](https://github.com/thelbaumann/team-generator/blob/main/assets/manager-inquirer.png)
+
 Then the user is prompted if they want to add an employee or finish their team. If they add an employee, it first asks the general questions required of every employee, and then asks if the employee mentioned is an engineer or an intern. Based on this, it triggers a switch statement which calls either a MakeEngineer or MakeIntern function and passes it the needed information collected beforehand. At this point, role-specific data is acquired, and then a new object using both the employee and the role-specific class is created, and then also appended to the Employee array. Then this code block begins again, asking the user if they wish to add another employee, or finish their team.
 
+![Inputting Intern](https://github.com/thelbaumann/team-generator/blob/main/assets/intern-inquirer.png)
+
 Once the user indicates to finish their team, the Employee array is passed to the render function inside the lib file 'htmlRenderer.js' and then the return value is then written to an html file in the output folder via a try/catch and writeFileSync functionality.
+
+![Inputting Engineer](https://github.com/thelbaumann/team-generator/blob/main/assets/engineer-finishTeam-inquirer.png)
 
 
  #### Click to watch the video below, which displays a utilization of this application!
