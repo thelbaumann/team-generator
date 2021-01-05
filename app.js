@@ -10,6 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const employees = [];
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -34,78 +36,3 @@ const render = require("./lib/htmlRenderer");
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
-(function buildManagerProfile() {
-inquirer.prompt([
-    {
-        type: "input",
-        message: "Welcome to the Employee Database Program! What is your (the manager's) name?",
-        name: "name",
-        validate: (input) => {
-            if (input !== "" && typeof input == 'string') {
-                return true;
-            } else {
-                return "Please enter a valid name!"
-            }
-        }
-    },
-    {
-        type: "number",
-        message: "What is your employee id?",
-        name: "id"
-    },
-    {
-        type: "input",
-        message: "What is your email?",
-        name: "email",
-        validate: (input) => {
-            if (input !== "" && typeof input== 'string') {
-                return true;
-            } else {
-                return "Please enter a valid email to proceed!"
-            }
-        }
-    },
-    {
-        type: "input",
-        message: "What is your office number?",
-        name: "officeNumber"
-        
-    }
-    ]).then((response) => {
-        const name = response.name;
-        const id = response.id;
-        const email = response.email;
-        const officeNumber = response.officeNumber;
-
-        new Manager(name, id, email, officeNumber);
-
-        addEmployees();
-       
-    })
-
-})();
-
-function addEmployees() {
-   inquirer.prompt([
-    {
-        type: "list",
-        message: "Would you like to add an employee to your team?",
-        name: "add",
-        choices: ["Yes", "No"]
-    }
-
-    ]).then((response) => {
-        if (response == "Yes") {
-            console.log("adding a team member")
-        }
-        else {
-            console.log("finishing and writing to file.")
-        }
-
-    })
-
-
-// function buildEmployeeRoster() {
-   
-
-// }
