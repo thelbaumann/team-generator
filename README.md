@@ -61,7 +61,7 @@ Jest Tests guided the beginning of my development, by helping me to construct em
 ### Using the Generator
 The file structure of this code project is much more complex than my last CLI project. The first is a "lib" folder, containing .js files of the different classes used to define employees: employee (applied to all), manager (supplemental to employee), intern (supplemental), and engineer (supplemental). The templates folder contains html "employee card" templates for each of the employee types. This is called and used by the html Renderer file, also contained in the former folder "lib". Then there is a test folder, containing a test file for every employee + supplemental class, which runs to make sure each new employee made with these classes will contain the properties and methods required to successfully write the file. Finally, there is the app.js file, which contains the main functionality of the file, which is the Inquirer prompts, the if/else statements, the switch statements, and the try/catch statements required to handle the information given by the user, and allow the user to continue to loop through adding employees to their list as long as they wish.
 
-![File Structure](https://github.com/thelbaumann/README.Generator/blob/main/Assets/Screenshots/validation_failed.png)
+![File Structure](https://github.com/thelbaumann/team-generator/blob/main/assets/file-structure.png)
 
 Upon running app.js, the user is first prompted via Inquirer for the information for the "manager" role. This is because the user story tell us this application is meant to be used by managers, so it is assumed they would be the users, and that a manager would be required to build a team. Once the manager information is fed via Inquirer, a new Manager object is created via the manager and employee classes, and then this object is written to the Employees array. 
 
@@ -80,7 +80,7 @@ Once the user indicates to finish their team, the Employee array is passed to th
 
 [Application Walkthrough Video](https://drive.google.com/file/d/1mFL84E9Tk846vAx-d_Bk882SNhUbixjL/view?usp=sharing)
 
-The sample html file of the example team made in the video can be found here [here](https://github.com/thelbaumann/README.Generator/blob/main/Assets/sample-README.md).
+The sample html file of the example team made in the video can be found here [here](https://github.com/thelbaumann/team-generator/blob/main/output/team.html).
 
 ## Contributing to this project
 Pull requests are welcome! Find my contact information below to reach out about collaborating with me.
