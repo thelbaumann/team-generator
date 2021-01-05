@@ -78,7 +78,7 @@ Once the user indicates to finish their team, the Employee array is passed to th
 
  #### Click to watch the video below, which displays a utilization of this application!
 
-[Application Walkthrough Video](https://drive.google.com/file/d/1mFL84E9Tk846vAx-d_Bk882SNhUbixjL/view?usp=sharing)
+[Application Walkthrough Video](https://drive.google.com/file/d/1VP3OzbOGgHJlVKejngkl14Qc0EwuiNQO/view)
 
 The sample html file of the example team made in the video can be found here [here](https://github.com/thelbaumann/team-generator/blob/main/output/team.html).
 
