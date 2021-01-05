@@ -87,7 +87,7 @@ The sample html file of the example team made in the video can be found here [he
 Pull requests are welcome! Find my contact information below to reach out about collaborating with me.
 
 ## Test Instructions
- Once cloned, you can run 'npm run tests' to run jest-powered tests for the template classes used in this application.
+ Once cloned, you can run 'npm run test' to run jest-powered tests for the template classes used in this application.
 
 ## Questions?
 [Laura Baumann](https://github.com/thelbaumann) -- You can reach me anytime for questions or collaboration at l.bmann@yahoo.com.
