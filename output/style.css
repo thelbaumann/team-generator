@@ -1,0 +1,53 @@
+/* ----- general page styles ---- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+    background-color:#b3446c;
+    color:white;
+}
+
+.team-area {
+    flex-wrap:wrap;
+}
+
+
+/* ----- text styles ---- */
+
+.jumbotron h1 {
+    font-size:3.5rem;
+}
+
+.employee-card h2 {
+    font-size:1.75rem;
+}
+
+.employee-card h3 {
+    font-size:1.25rem;
+}
+
+a, a:hover, a:focus {
+    color:#de5285;
+}
+
+
+
+/* ----- employee card styles ---- */
+
+.employee-card {
+    margin:2.5%;
+    min-width:25%;
+    box-shadow: 5px 5px 10px #de5285;
+}
+
+.employee-card .card-header {
+    background-color:#de5285;
+    color:white;
+}
+
+.employee-card li {
+   margin: 0 0 5% 0;
+   border-color:#de5285;
+}
